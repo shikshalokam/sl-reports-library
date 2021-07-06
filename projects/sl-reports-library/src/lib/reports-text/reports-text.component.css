@@ -1,0 +1,9 @@
+.heading {
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.answer-list {
+  margin-top: 3px;
+    border-top: 1px solid #ccc!important;
+}

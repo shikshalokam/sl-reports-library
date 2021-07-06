@@ -1,0 +1,49 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sl-reports-library": {
+      "projectType": "library",
+      "root": "projects/sl-reports-library",
+      "sourceRoot": "projects/sl-reports-library/src",
+      "prefix": "sl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/sl-reports-library/tsconfig.lib.json",
+            "project": "projects/sl-reports-library/ng-package.json"
+          },
+          "styles": [
+            "./node_modules/@project-sunbird/sb-styles/assets/_styles.scss"
+          ],
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/sl-reports-library/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sl-reports-library/src/test.ts",
+            "tsConfig": "projects/sl-reports-library/tsconfig.spec.json",
+            "karmaConfig": "projects/sl-reports-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sl-reports-library/tsconfig.lib.json",
+              "projects/sl-reports-library/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "sl-reports-library"
+}

@@ -1,0 +1,88 @@
+<div *ngFor="let section of reportSections">
+  <div class="ui bottom p-0 b-0 no-bg my-24 graph-content-section">
+    <div *ngFor="let element of section?.questionArray; let i = index">
+      <div
+        class="ui segment chart-conent-section"
+        [ngSwitch]="element?.responseType"
+      >
+        <sl-reports-text
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'text'"
+        ></sl-reports-text>
+        <sl-reports-text
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'number'"
+        ></sl-reports-text>
+        <sl-reports-text
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'date'"
+        ></sl-reports-text>
+        <sl-reports-text
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchDefault
+        ></sl-reports-text>
+        <sl-pie-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'radio'"
+        ></sl-pie-chart>
+        <sl-pie-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'pie'"
+        ></sl-pie-chart>
+        <sl-bar-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'bar'"
+        ></sl-bar-chart>
+        <sl-bar-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'multiselect'"
+        ></sl-bar-chart>
+        <sl-bar-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'column'"
+        ></sl-bar-chart>
+        <sl-percentage-column-charts
+          [chartData]="element"
+          *ngSwitchCase="'horizontalBar'"
+        >
+        </sl-percentage-column-charts>
+        <sl-matrix-chart
+          [data]="element"
+          [questionNumber]="i + 1"
+          *ngSwitchCase="'matrix'"
+        ></sl-matrix-chart>
+        <sl-expansion-table
+          [datas]="element"
+          *ngSwitchCase="'expansion-table'"
+        ></sl-expansion-table>
+      </div>
+      <div
+        *ngFor="let e of element.evidences"
+        (click)="openFile(e)"
+        class="area"
+      >
+        <div *ngIf="e.extension == 'png'" class="mx-10">
+          <i class="file image outline icon"></i>
+        </div>
+        <div *ngIf="e.extension == 'jpg'" class="mx-10">
+          <i class="file image outline icon"></i>
+        </div>
+        <div *ngIf="e.extension == 'jpeg'" class="mx-10">
+          <i class="file image outline icon"></i>
+        </div>
+        <div *ngIf="e.extension == 'pdf'" class="mx-10">
+          <i class="file pdf outline icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+.report-title {
+    font-size: 22px;
+    color: var(--sb-text);
+    font-family: "Noto Sans";
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.report-subtitle{
+    font-size: 19px;
+    color: var(--sb-search-input-text);
+    font-family: "Noto Sans";
+    line-height: 24px;
+    font-weight: 600;
+}

@@ -1,0 +1,50 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    background:white;
+    color: var(--sb-text);
+  }
+  
+  th,
+  td {
+    text-align: center;
+    padding: 12px 4px;
+    color: #000;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .expansionPanel {
+    border-radius: 10px;
+    width: 100%;
+    margin: 16px 0px !important;
+    padding: 0px !important;
+  }
+  
+  .assess {
+    flex: 0;
+     /* padding: 2px 2.2px; */
+    text-align: -webkit-center;
+  }
+  
+
+  .heading {
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .domain{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3px;
+      border:1px solig grey;
+      color: var(--sb-text);
+
+  }
+
+  .drop-accordian{
+    margin-bottom: 4px;
+  }

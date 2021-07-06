@@ -1,0 +1,10 @@
+<strong>{{ questionNumber }}) {{ data?.question }}</strong>
+<div class="answer-list">
+  <div *ngFor="let answer of data?.answers">
+    {{
+      data?.resposeType === "date" && answer
+        ? (answer | date: "medium":"IST")
+        : answer
+    }}
+  </div>
+</div>

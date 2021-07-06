@@ -1,0 +1,29 @@
+<div class="thumbnail-card">
+    <img [src]="url" *ngIf="imageFormats.includes(extension)" (click)="openImage(url)" class="card-images" />
+    <!-- <fa name="file-video-o" class="attachmentIcon" *ngIf="videoFormats.includes(extension)" (click)="playVideo(url)"></fa> -->
+    <i
+    class="video icon attachmentIcon"
+      *ngIf="videoFormats.includes(extension)"
+      (click)="openImage(url)"
+    ></i>
+  
+    <!-- <fa *ngIf="audioFormats.includes(extension)" name="file-audio-o" class="attachmentIcon" (click)="playAudio(url)"></fa> -->
+    <i
+      *ngIf="audioFormats.includes(extension)"
+      class="file audio icon attachmentIcon"
+      (click)="openImage(url)"
+    ></i>
+    <!-- <fa class="attachmentIcon" name="file-pdf-o" *ngIf="pdfFormats.includes(extension)" (click)="openDocument(url)"></fa> -->
+    <i
+      class="file alternate icon attachmentIcon"
+      *ngIf="pdfFormats.includes(extension)"
+      (click)="openImage(url)"
+    ></i>
+  
+    <i
+    class="file alternate icon attachmentIcon"
+    *ngIf="spreadSheetFormats.includes(extension) || wordFormats.includes(extension) "
+    (click)="openImage(url)"
+  ></i>
+  </div>
+  

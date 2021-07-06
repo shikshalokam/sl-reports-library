@@ -1,0 +1,22 @@
+<div *ngIf="pieChartData" >
+  <div class="heading">
+    <h4>{{ questionNumber }}) {{ data?.question }}</h4>
+  </div>
+  <ng-container *ngIf="data?.chart?.data">
+    <canvas 
+    #chartCanvas
+    baseChart
+    width="300px" 
+    height="90px"
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [legend]="pieChartLegend"
+    [colors]="chartColors"
+  >
+  </canvas>
+  </ng-container>
+
+  <div class="errorMsg" *ngIf="!data?.chart?.data">No data found</div>
+</div>
