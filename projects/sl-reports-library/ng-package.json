@@ -2,7 +2,13 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/sl-reports-library",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "chartjs-plugin-datalabels": "pluginDataLabels",
+      "ng2-charts":"ng2Charts",
+      "chartjs-plugin-stacked100":"stackedBar",
+      "ng2-semantic-ui-v9":"ng2SemanticUiV9"
+    }
   },
   "whitelistedNonPeerDependencies": [
     "chart.js",

@@ -39,11 +39,16 @@
               "projects/sl-reports-library/tsconfig.lib.json",
               "projects/sl-reports-library/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "sl-reports-library"
+  "defaultProject": "sl-reports-library",
+  "cli": {
+    "analytics": false
+  }
 }

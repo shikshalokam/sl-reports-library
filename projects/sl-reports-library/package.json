@@ -1,6 +1,25 @@
 {
-  "name": "sl-reports-library",
-  "version": "0.0.1",
+  "name": "@shikshalokam/sl-reports-library",
+  "version": "1.0.5",
+  "private": false,
+  "author": "Shikshalokam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shikshalokam/sl-reports-library.git"
+  },
+  "description": "Library to integrate questionnaire in SL Projects",
+  "bugs": {
+    "url":"https://github.com/shikshalokam/sl-reports-library/issues"
+  },
+  "homepage": "https://github.com/shikshalokam/sl-reports-library",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "shikshalokam",
+    "reports",
+    "obsevation",
+    "charts"
+  ],
   "peerDependencies": {
     "@angular/common": "^9.1.13",
     "@angular/core": "^9.1.13"
