@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PercentageColumnChartsComponent } from './percentage-column-charts.component';
 
@@ -6,7 +6,7 @@ describe('PercentageColumnChartsComponent', () => {
   let component: PercentageColumnChartsComponent;
   let fixture: ComponentFixture<PercentageColumnChartsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PercentageColumnChartsComponent ]
     })
