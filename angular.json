@@ -13,7 +13,8 @@
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/sl-reports-library/tsconfig.lib.json",
-            "project": "projects/sl-reports-library/ng-package.json"
+            "project": "projects/sl-reports-library/ng-package.json",
+            "preserveSymlinks": true
           },
           "styles": [
             "./node_modules/@project-sunbird/sb-styles/assets/_styles.scss"
@@ -31,23 +32,10 @@
             "tsConfig": "projects/sl-reports-library/tsconfig.spec.json",
             "karmaConfig": "projects/sl-reports-library/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/sl-reports-library/tsconfig.lib.json",
-              "projects/sl-reports-library/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "sl-reports-library",
   "cli": {
     "analytics": false
   }
