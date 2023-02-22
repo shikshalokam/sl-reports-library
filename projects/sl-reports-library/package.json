@@ -21,8 +21,8 @@
     "charts"
   ],
   "peerDependencies": {
-    "@angular/common": "~14.2.12",
-    "@angular/core": "~14.2.12"
+    "@angular/common": "^15.1.5",
+    "@angular/core": "^15.1.5"
   },
   "dependencies": {
     "chart.js": "^2.9.4",
