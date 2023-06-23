@@ -1,6 +1,6 @@
 <div *ngIf="pieChartData" >
   <div class="heading">
-    <h4>{{ questionNumber }} {{ data?.question }}</h4>
+    <strong>{{questionNumber}}) {{ data?.question }}</strong>
   </div>
   <div *ngIf="data?.chart?.data" class="chart-container">
     <canvas 

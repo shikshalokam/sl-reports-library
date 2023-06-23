@@ -1,6 +1,6 @@
 .heading {
-  text-align: center;
-  padding: 15px 10px;
+  text-align: left;
+  padding: 0px 10px;
 }
 .errorMsg {
   color: grey;
@@ -8,6 +8,3 @@
   padding: 20px 0;
 }
 
-.chart-container{
-  height:350px
-}
